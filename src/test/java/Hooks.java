@@ -6,6 +6,7 @@ import utils.BaseClass;
 public class Hooks {
     BaseClass baseClass = new BaseClass();
 
+
     @Before
     public void browserSetUp()
     {
