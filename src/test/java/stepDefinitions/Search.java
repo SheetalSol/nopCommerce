@@ -4,7 +4,11 @@ import PageObjects.HomePage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 import utils.BaseClass;
+
+import java.util.List;
 
 public class Search extends BaseClass {
 
@@ -26,7 +30,13 @@ public class Search extends BaseClass {
 
     @Then("I should be see relavant result on the search page")
     public void i_should_be_see_relavant_result_on_the_search_page() {
+    List<WebElement> result = homePage.getSearchResult();
+    for(WebElement e : result)
+    {
+        System.out.println("Item name : "+ e.getText());
+        Assert.assertTrue(e.getText().contains("Laptop"));
 
+    }
     }
 
 }
