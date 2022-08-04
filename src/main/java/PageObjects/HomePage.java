@@ -43,12 +43,6 @@ public class HomePage
         linkRegister.click();
     }
 
-    @FindBy(className = "product-title")
-    public List<WebElement> searchResult;
 
-    public List<WebElement> getSearchResult()
-    {
-     return searchResult;
-    }
 
 }
