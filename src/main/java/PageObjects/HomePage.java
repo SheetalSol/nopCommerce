@@ -10,7 +10,6 @@ import java.util.List;
 
 public class HomePage
 {
-
     public HomePage(WebDriver driver) {
         PageFactory.initElements(driver,this);
     }
@@ -42,6 +41,14 @@ public class HomePage
     public void clickRegisterLink()
     {
         linkRegister.click();
+    }
+
+    @FindBy(className = "product-title")
+    public List<WebElement> searchResult;
+
+    public List<WebElement> getSearchResult()
+    {
+     return searchResult;
     }
 
 }
