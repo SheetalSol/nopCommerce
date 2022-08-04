@@ -14,6 +14,9 @@ public class HomePage
         PageFactory.initElements(driver,this);
     }
 
+    @FindBy(linkText = "Log in")
+    public WebElement lnkLogin;
+
     @FindBy(id="small-searchterms")
     public WebElement searchTextBox;
 
@@ -41,6 +44,10 @@ public class HomePage
     public void clickRegisterLink()
     {
         linkRegister.click();
+    }
+    public void clickLoginLink()
+    {
+        lnkLogin.click();
     }
 
 

@@ -3,7 +3,7 @@ Feature: Verify registration
   I should be able to register with valid data
   Background:
     Given I am on the homepage "https://demo.nopcommerce.com/"
-    @register
+    @smoke @regression @register
   Scenario Outline:
       When I click on the register link on the homepage
       Then I should be redirected to the register page

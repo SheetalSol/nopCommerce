@@ -4,7 +4,7 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features=".",tags="@register")
+@CucumberOptions(features=".",tags="@login or @register")
 public class TestRunner {
 
 }
