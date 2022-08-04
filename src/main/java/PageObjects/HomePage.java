@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.BaseClass;
 
+import java.util.List;
+
 public class HomePage
 {
 
@@ -19,6 +21,12 @@ public class HomePage
     @FindBy(xpath = "//button[text()='Search']")
     public WebElement btnSearch;
 
+    @FindBy(className = "product-title")
+    public List<WebElement> searchResult;
+
+    @FindBy(xpath = "//a[contains(text(),'Register')]")
+    public WebElement linkRegister;
+
     public void enterSearchTerm(String searchTerm)
     {
       searchTextBox.sendKeys(searchTerm);
@@ -26,6 +34,14 @@ public class HomePage
     public void clickSearchButton()
     {
         btnSearch.click();
+    }
+    public List<WebElement> getSearchResult()
+    {
+        return searchResult;
+    }
+    public void clickRegisterLink()
+    {
+        linkRegister.click();
     }
 
 }

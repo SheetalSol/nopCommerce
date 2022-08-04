@@ -9,7 +9,7 @@ Feature: Verify registration
       Then I should be redirected to the register page
       When I select gender "<Gender>"
       When I enter FirstName "<Firstname>"
-      When I enter LastName "<LastName>"
+      When I enter LastName "<Lastname>"
       When I select Birthday "<Birthday>" from DropDownList
       When I select BirthMonth "<BirthMonth>" from DropDownList
       When I select BirthYear "<BirthYear>" from DropDownList
@@ -17,8 +17,8 @@ Feature: Verify registration
       When I enter password "<Password>"
       When I enter ConfirmPassword "<ConfirmPassword>"
       And Click on the Register button
-      Then I should be redirected to the RegisterPage
+      Then I should be redirected to the Registerresult page
 
     Examples:
       |Gender| Firstname |Lastname  |Birthday|BirthMonth|BirthYear | Email | Password |ConfirmPassword|
-      |Male  |Jethalal   | Ghada    | 01     |January | 1970       |abc@gmail.com| 123456| 123456     |
+      |Male  |Jethalal   | Ghada    | 1     |January | 1970       |abc@gmail.com| 123456| 123456     |
