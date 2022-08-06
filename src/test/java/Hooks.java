@@ -16,6 +16,6 @@ public class Hooks {
     @After
     public void browserTearDown()
     {
-      //  baseClass.closeBrowser();
+      baseClass.closeBrowser();
     }
 }

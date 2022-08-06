@@ -1,10 +1,12 @@
 Feature: Verify login
   As a registered user
   I should be able to login with valid data
+
   Background:
     Given I am on the homepage "https://demo.nopcommerce.com/"
-    @smoke @regression @login
-    Scenario Outline:
+
+  @smoke @regression @login
+  Scenario Outline:
       When I click on the Login link
       Then I should be redirected to the login page
       When I enter valid email "<Email>"
